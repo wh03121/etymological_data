@@ -3,6 +3,7 @@ from DataProcessing import *
 from iWebHandler import *
 import codecs
 import os
+import re
 
 class Website(object):
     @cherrypy.expose
@@ -15,11 +16,22 @@ class Website(object):
 
     @cherrypy.expose
     def related(self, word_one, word_two):
+        string = codecs.open('front_stub.html', 'r').read()
+
+        print(word_one + word_two)
+
+        if not(re.match("^[a-zA-Z\sÀ-ž]+$", word_one)):
+            string += "<h3>First word does not match the pattern. Try again.</h3>"
+            string += codecs.open('back_stub.html').read()
+            return string
+        if not(re.match("^[a-zA-Z\sÀ-ž]+$", word_two)):
+            string += "<h3>Second word does not match the pattern. Try again.</h3>"
+            string += codecs.open('back_stub.html').read()
+            return string
+
         dh = DataHandler("sqlite:///db.db")
         word_one = dh.find_first_of_word("eng: " + word_one)
         word_two = dh.find_first_of_word("eng: " + word_two)
-
-        string = codecs.open('front_stub.html', 'r').read()
         
         if word_one is None:
             string += "<h3>The first word you entered wasn't found.</h3>"

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Etymological Relation Interface</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+
+  <!-- Downloaded template from https://startbootstrap.com/templates/business-frontpage/ -->
+  
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Etymological Relation Interface</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">About the Etymological Relation Interface</h1>
+          <p class="lead mb-5 text-white-50">This website is the culmination of my semester project for LING 3630. Using the free version of the massive iWeb corpus and data gathered by Gerard Melo of UC Berkeley, this website does one simple thing: given two words, it will tell you if they are related, and (depending on the available information) how they are related.
+          </p>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Interface</h2>
+        <hr>
+        <p>Note that the following page may take a second to load.</p>
+        <hr>
+        <p>Also note that words ARE case sensitive. This program will say the word "Meow" does not exist because the first letter is capitalized--however, it will also say the word "indian" does not exist because the first word is <i>not</i> capitalized. Keep this in mind while entering words.</p>
+          <p>Also read the <a href="/about">about page</a> to understand better what this website does.</p>
+        <form method="get" action="related">
+            <input type="text" placeholder="First Word" name="word_one" pattern="[a-zA-ZÀ-ž\s]+" />
+            <input type="text" placeholder="Second Word" name="word_two" pattern="[a-zA-ZÀ-ž\s]+" />
+            <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>View the Source Code</h2>
+        <hr>
+        <p>It takes a lot more than is visible here to create this. Take a look at my source code:</p>
+        <a href="https://github.com/hodgeswt/etymological_data">Source code on GitHub</a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Will Thomas Hodges 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

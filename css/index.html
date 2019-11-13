@@ -1,0 +1,20 @@
+<!DOCTPYE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Etymological Relation Interface</title>
+        <link href="css/business-frontpage.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Etymological Relation Interface</h1>
+        <p>This website will allow you to give two word inputs, then determine if those words are related.</p>
+        <p>The language is assumed to be English.</p>
+        <p>Please note that the following page may take a minute to load.</p>
+        <form method="get" action="related">
+            <p>Word 1: <input type="text" pattern="[a-zA-Z\s]+" value="Enter a word here" name="word_one" /></p>
+            <p>Word 2: <input type="text" pattern="[a-zA-Z\s]+" value="Enter a word here" name="word_two" /></p>
+            <button type="submit">Check relation</button>
+        </form>
+
+    </body>
+</html>
